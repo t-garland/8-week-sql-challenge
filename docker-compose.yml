@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:16
+    container_name: pg_8week
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: sql8week
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      # Put any .sql files you want auto-run on first boot in ./initdb
+      - ./initdb:/docker-entrypoint-initdb.d:ro
+
+volumes:
+  pg_data:
