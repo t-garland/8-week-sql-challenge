@@ -3,5 +3,13 @@
   <component name="DataSourcePerFileMappings">
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/a9f56f4c-e574-48ab-a3be-a54fdccebc4f/console.sql" value="a9f56f4c-e574-48ab-a3be-a54fdccebc4f" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/a9f56f4c-e574-48ab-a3be-a54fdccebc4f/console_1.sql" value="a9f56f4c-e574-48ab-a3be-a54fdccebc4f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/a9f56f4c-e574-48ab-a3be-a54fdccebc4f/console_2.sql" value="a9f56f4c-e574-48ab-a3be-a54fdccebc4f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/a9f56f4c-e574-48ab-a3be-a54fdccebc4f/console_3.sql" value="a9f56f4c-e574-48ab-a3be-a54fdccebc4f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/a9f56f4c-e574-48ab-a3be-a54fdccebc4f/console_4.sql" value="a9f56f4c-e574-48ab-a3be-a54fdccebc4f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/a9f56f4c-e574-48ab-a3be-a54fdccebc4f/console_5.sql" value="a9f56f4c-e574-48ab-a3be-a54fdccebc4f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/a9f56f4c-e574-48ab-a3be-a54fdccebc4f/console_6.sql" value="a9f56f4c-e574-48ab-a3be-a54fdccebc4f" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/a9f56f4c-e574-48ab-a3be-a54fdccebc4f/console_7.sql" value="a9f56f4c-e574-48ab-a3be-a54fdccebc4f" />
+    <file url="file://$PROJECT_DIR$/sql/balanced_tree.sql" value="a9f56f4c-e574-48ab-a3be-a54fdccebc4f" />
+    <file url="file://$PROJECT_DIR$/sql/clique_bait_schema.sql" value="a9f56f4c-e574-48ab-a3be-a54fdccebc4f" />
   </component>
 </project>

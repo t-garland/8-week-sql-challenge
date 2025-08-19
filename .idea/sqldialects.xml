@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/sql/balanced_tree.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/sql/clique_bait_schema.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/sql/dannys_diner_schema.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/sql/data_bank_schema.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/sql/data_mart_schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/foodie_fi_schema.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/sql/pizza_runner_schema.sql" dialect="PostgreSQL" />
+    <file url="PROJECT" dialect="PostgreSQL" />
   </component>
 </project>
