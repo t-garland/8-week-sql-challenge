@@ -1,4 +1,3 @@
-DROP SCHEMA IF EXISTS clique_bait;
 CREATE SCHEMA clique_bait;
 SET search_path = clique_bait;
 
@@ -58,7 +57,7 @@ VALUES
   ('12', 'Checkout', null, null),
   ('13', 'Confirmation', null, null);
 
-DROP TABLE clique_bait.users;
+DROP TABLE IF EXISTS clique_bait.users;
 CREATE TABLE clique_bait.users (
   "user_id" INTEGER,
   "cookie_id" VARCHAR(6),
