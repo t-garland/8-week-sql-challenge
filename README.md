@@ -7,10 +7,15 @@ Please visit the official **[8 Week SQL Challenge website](https://8weeksqlchall
 
 ## Getting Started
 
+**Prerequisites**
+
+- Download and install Docker desktop at https://docs.docker.com/get-started/introduction/get-docker-desktop/
+- I highly recommend you use JetBrains DataGrip for integrated VCS, Terminal (available as a plug-in), and a modern GUI. Download a trial at https://www.jetbrains.com/datagrip/
+- This solution is compatible with Windows/Mac/Linux.
+
 **Clone the repository**
 
     git clone https://github.com/t-garland/8-week-sql-challenge.git
-    cd 8-week-sql-challenge
 
 **Start the database**
 
@@ -58,12 +63,10 @@ If you change these, update both `docker-compose.yml` and your IDE connection se
     docker compose down -v
     docker compose up -d
 
-If you’re using a bind mount for data instead of a named volume, delete the folder contents manually before restarting.
-
 ## Tips
 
-- Make init scripts **idempotent** where possible (`CREATE TABLE IF NOT EXISTS`, `DO $$ ... EXCEPTION WHEN duplicate_object THEN ... $$;`).  
-- If your container started before you added files to `./initdb/`, wipe the volume and start again to trigger init. 
+- init scripts have been updated to be **idempotent** where possible (`CREATE TABLE IF NOT EXISTS`, `DO $$ ... EXCEPTION WHEN duplicate_object THEN ... $$;`). Feel free to make your own changes or contact me with your feedback.
+- If your container started before you make changes to files in `./initdb/`, re-run from a clean slate and start again to trigger init. 
 - If `docker compose ps` shows a different host port (e.g., `5433->5432/tcp`), connect using that host port in your IDE.
 
 ## Credits
@@ -73,10 +76,7 @@ This project is a **personal learning starter** for the community.
 All case studies, datasets, and original challenge questions were created by **Danny Ma (@datawithdanny)**.  
 Please support and refer to the official site for the full challenges and materials: **https://8weeksqlchallenge.com/**
 
-## Fork/Template Usage
+## Feedback
 
-- Fork this repo and keep your solutions in `weeks/`.  
-- For a clean public template (no notes), you can keep a separate branch with:
-  - Only `docker-compose.yml`, `initdb/`, a minimal `README.md`, and `CREDITS.md`.  
-  - Exclude your `weeks/` folder until you’re ready to share solutions.
+I invite feedback, so that this repository can be enjoyed by everyone that finds it. Good luck in your data journey!
 
