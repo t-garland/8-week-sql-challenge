@@ -24,7 +24,7 @@ WITH order_rank AS (
         menu.product_name AS product_name
     FROM sales
     INNER JOIN menu
-    ON sales.product_id = menu.product_id
+        ON sales.product_id = menu.product_id
 )
 
 SELECT
@@ -34,7 +34,45 @@ FROM order_rank
 WHERE row_num = 1;
 
 -- 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
+WITH product_counts AS (
+    SELECT
+        menu.product_name AS product,
+        COUNT(sales.product_id) AS count,
+        RANK() OVER (ORDER BY COUNT(sales.product_id) DESC) as rnk
+    FROM menu
+    INNER JOIN sales
+        ON menu.product_id = sales.product_id
+    GROUP BY menu.product_name
+    ORDER BY count DESC
+)
+
+SELECT
+    product,
+    count
+FROM product_counts
+WHERE rnk = 1;
+
 -- 5. Which item was the most popular for each customer?
+
+WITH ranked_items AS (
+    SELECT
+        sales.customer_id AS customer,
+        menu.product_name AS product,
+        COUNT(sales.product_id) AS count,
+        DENSE_RANK() OVER (PARTITION BY customer_id ORDER BY COUNT(sales.product_id) DESC) as customer_rnk
+    FROM sales
+    INNER JOIN menu
+        ON sales.product_id = menu.product_id
+    GROUP BY sales.customer_id, menu.product_name
+)
+
+SELECT
+    customer,
+    product AS favourite_item
+FROM ranked_items
+WHERE customer_rnk = 1;
+
+
 -- 6. Which item was purchased first by the customer after they became a member?
 -- 7. Which item was purchased just before the customer became a member?
 -- 8. What is the total items and amount spent for each member before they became a member?
